@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Voidara Landing Page</title>
+<style>
+  /* Background gradient */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #1de9b6, #f0f8ff);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
+  /* Navigation */
+  nav {
+    background: rgba(255 255 255 / 0.25);
+    backdrop-filter: blur(8px);
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  nav ul li {
+    margin-right: 2rem;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Main content area */
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto 3rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  /* Responsive video container */
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+
+  /* Buttons */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+  }
+  .btn {
+    padding: 0.85rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+  }
+  .btn-free-agent {
+    background: #7b5fcf; /* purple */
+    box-shadow: 0 4px 10px rgba(123,95,207,0.5);
+  }
+  .btn-free-agent:hover {
+    background: #6746b8;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(103, 70, 184, 0.7);
+  }
+  .btn-partner {
+    background: #2575fc; /* blue */
+    box-shadow: 0 4px 10px rgba(37,117,252,0.5);
+  }
+  .btn-partner:hover {
+    background: #0f4ee5;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(15, 78, 229, 0.7);
+  }
+
+  /* Contact number footer */
+  footer {
+    background: rgba(255 255 255 / 0.25);
+    backdrop-filter: blur(8px);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #222;
+    margin-top: auto;
+  }
+
+  /* Instructions section */
+  #instructions {
+    max-width: 850px;
+    margin: 2rem auto 4rem auto;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 8px;
+    color: #222;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  #instructions h2 {
+    margin-top: 0;
+    color: #444;
+    font-size: 1.5rem;
+  }
+  #instructions ol, #instructions ul {
+    margin-left: 1.2rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Welcome to Voidara</h1>
+  <p>Voidara simplifies life through AI and offers business opportunities to everyone.</p>
+
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/gFXII1I11nk" 
+      title="Voidara Introduction Video" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="buttons">
+    <a 
+      href="https://partner.voidara.ai/join/5OmeAppGzOUn" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="btn btn-free-agent" 
+      aria-label="Access Your Free Agent">
+      Access Your Free Agent
+    </a>
+    <a 
+      href="https://partner.voidara.ai/register?ref=frelo" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="btn btn-partner" 
+      aria-label="Join as a Partner">
+      Join as a Partner
+    </a>
+  </div>
+</main>
+
+<footer>
+  Contact us: +31 6 83 21 28 23
+</footer>
+
+<section id="instructions">
+  <h2>How to Deploy This Page to GitHub Pages</h2>
+  <ol>
+    <li>Create a free account on <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>.</li>
+    <li>After logging in, click on <strong>New repository</strong> to create a new project repository.</li>
+    <li>Give your repository a name (e.g., <code>voidara-landing</code>), set it to Public, and click <strong>Create repository</strong>.</li>
+    <li>On the repository page, click <strong>Add file &gt; Upload files</strong>, then upload the <code>index.html</code> file containing this landing page code.</li>
+    <li>After uploading, commit the changes.</li>
+    <li>Go to <strong>Settings</strong> &gt; <strong>Pages</strong> in the repository sidebar.</li>
+    <li>Under Source, choose <strong>main</strong> branch (or your default branch) and save.</li>
+    <li>Wait a few minutes. Your page will be live at <code>https://your-github-username.github.io/your-repository-name/</code>.</li>
+  </ol>
+
+  <h2>How to Customize the Landing Page</h2>
+  <ul>
+    <li><strong>Change colors:</strong> Edit the <code>background</code> property in the CSS <code>body</code> selector to adjust the gradient colors.</li>
+    <li><strong>Update links:</strong> Replace the URLs in the <code>href</code> attributes of the two buttons in the <code>&lt;a&gt;</code> tags.</li>
+    <li><strong>Swap YouTube videos:</strong> Update the <code>src</code> attribute of the <code>iframe</code> with any new YouTube embed link.</li>
+    <li><strong>Modify contact info:</strong> Change the phone number inside the <code>&lt;footer&gt;</code> tag.</li>
+  </ul>
+  <p>Feel free to personalize the page further to align it with your branding and message. You can add your logo, change fonts, or add more content as needed.</p>
+</section>
+
+</body>
+</html>
